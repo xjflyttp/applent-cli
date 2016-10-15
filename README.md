@@ -8,7 +8,7 @@ Applent AT824 AT825 AT826 cli
 3. make
 ```
 
-## Usege
+## Usage
 ```
 //query system info
 hid "idn?" "" 
@@ -17,6 +17,13 @@ hid "idn?" ""
 //query measure value
 hid "FETC?" ""
 // output "+7.929158e-15,+0.000000e+00"
+
+//set page
+hid "DISP:PAGE" "meas"
+
+//query page
+hid "DISP:PAGE?" ""
+// output "meas"
 
 etc....
 ```
