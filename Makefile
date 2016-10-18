@@ -1,12 +1,4 @@
-LDFLAGS += -lhidapi-libusb
-LDFLAGS += -L/usr/local/lib/
-
-CPPFLAGS = -I/usr/local/include/hidapi/ -static
-
-#LDFLAGS += -L/usr/local/lib/
-#HEADERS += hidapi.h
-
 all : hid
-hid : hid.o
+	$(CC) hid.cpp -lhidapi-libusb -L/usr/local/lib/ -I/usr/local/include/hidapi/  -o hid 
 clean : 
 	rm -f *.o
